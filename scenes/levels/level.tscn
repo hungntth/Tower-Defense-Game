@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnj438cs45i3f"]
+
+[ext_resource type="Script" uid="uid://tp8e3w4iqtfx" path="res://scenes/levels/level.gd" id="1_377w7"]
+[ext_resource type="PackedScene" uid="uid://eobdxp7uhvsb" path="res://scenes/towers/tower_basic.tscn" id="3_xb4v1"]
+
+[sub_resource type="Curve2D" id="Curve2D_ftxyw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 406, 445, 0, 0, 0, 0, 587, 443, 0, 0, 0, 0, 584, 671, 0, 0, 0, 0, 810, 663, 0, 0, 0, 0, 808, 524, 0, 0, 0, 0, 962, 526)
+}
+point_count = 6
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_377w7")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-224, -252)
+curve = SubResource("Curve2D_ftxyw")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(45, -65)
+
+[node name="TowerBasic" parent="Node2D" instance=ExtResource("3_xb4v1")]
+position = Vector2(277, 286)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(326, 225)
+zoom = Vector2(3, 3)

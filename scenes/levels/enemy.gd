@@ -1,0 +1,15 @@
+extends Area2D
+
+
+var path_follow: PathFollow2D
+
+func setup(new_path_follow: PathFollow2D):
+	path_follow = new_path_follow
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	path_follow.progress += 50 * delta
+	if path_follow.progress_ratio >= 0.99:
+		print('damage')
+		queue_free()
