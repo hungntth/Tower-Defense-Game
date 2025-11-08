@@ -16,12 +16,13 @@ script = ExtResource("1_377w7")
 position = Vector2(-224, -252)
 curve = SubResource("Curve2D_ftxyw")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(45, -65)
+[node name="Towers" type="Node2D" parent="."]
 
-[node name="TowerBasic" parent="Node2D" instance=ExtResource("3_xb4v1")]
+[node name="TowerBasic" parent="Towers" instance=ExtResource("3_xb4v1")]
 position = Vector2(277, 286)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(326, 225)
-zoom = Vector2(3, 3)
+position = Vector2(446, 296)
+zoom = Vector2(2, 2)
+
+[node name="Bullets" type="Node2D" parent="."]

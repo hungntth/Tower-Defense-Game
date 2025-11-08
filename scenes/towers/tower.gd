@@ -1,6 +1,8 @@
 class_name Tower extends Node2D
 
 var enemies: Array
+@warning_ignore("unused_signal")
+signal shoot(pos: Vector2, direction: float, bullet_enum: Data.Bullet)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

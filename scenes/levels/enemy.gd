@@ -13,3 +13,7 @@ func _process(delta: float) -> void:
 	if path_follow.progress_ratio >= 0.99:
 		print('damage')
 		queue_free()
+
+
+func _on_area_entered(bullet: Area2D) -> void:
+	bullet.queue_free()
